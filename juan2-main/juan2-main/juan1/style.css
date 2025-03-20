@@ -1,0 +1,159 @@
+body {
+    font-family: bree serif, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #fff;
+
+}
+
+header, footer {
+    background-color: #15789a;
+    padding: 10px;
+    text-align: center;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #0c0c0c;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #181616;
+}
+
+main {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}/* Estilos Gerais */
+#sobre-nos {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222;
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.sobre-imagem {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex: 1 1 300px;
+}
+
+.sobre-texto {
+    flex: 2 1 600px;
+}
+
+.sobre-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.sobre-texto h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.sobre-texto ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.sobre-texto ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+
+    .sobre-imagem {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+.img1 {
+    width: 30%;         /* A imagem ocupará 20% da largura disponível */
+    height: auto;        /* A altura será ajustada proporcionalmente */
+    border-radius: 8px;  /* Arredonda as bordas da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adiciona sombra suave */
+    transition: transform 0.3s ease-in-out;  /* Animação ao passar o mouse */
+    display: block;      /* Transforma a imagem em um elemento de bloco */
+    margin: 0 auto;      /* Centraliza a imagem horizontalmente */
+}
+
+.img1:hover {
+    transform: scale(1.05);  /* A imagem cresce um pouco quando o mouse passa sobre ela */
+}figcaption {
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    margin-top: 10px; /* Adiciona espaço acima do figcaption */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do figcaption */
+    padding: 10px; /* Adiciona espaço interno ao redor do texto */
+    text-align: center; /* Centraliza o texto */
+    font-family: Arial, sans-serif; /* Define uma fonte legível */
+    color: #333; /* Cor do texto */
+    background-color: #f9f9f9; /* Fundo leve para destacar */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+figcaption {
+    font-size: 25px; /* Aumenta o tamanho da fonte */
+    margin-top: 10px; /* Adiciona espaço acima do figcaption */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do figcaption */
+    padding: 10px; /* Adiciona espaço interno ao redor do texto */
+    text-align: center; /* Centraliza o texto */
+    font-family: Arial, sans-serif; /* Define uma fonte legível */
+    color: #000000; /* Cor do texto */
+    background-color: #ffffff; /* Fundo leve para destacar */
+    border-radius: 5px; /* Bordas arredondadas */
+}
