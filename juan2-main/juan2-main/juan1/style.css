@@ -124,7 +124,7 @@ h2 {
 
 
 .img1 {
-    width: 30%;         /* A imagem ocupará 20% da largura disponível */
+    width: 25%;         /* A imagem ocupará 20% da largura disponível */
     height: auto;        /* A altura será ajustada proporcionalmente */
     border-radius: 8px;  /* Arredonda as bordas da imagem */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adiciona sombra suave */
@@ -156,4 +156,72 @@ figcaption {
     color: #000000; /* Cor do texto */
     background-color: #ffffff; /* Fundo leve para destacar */
     border-radius: 5px; /* Bordas arredondadas */
+}
+
+.botoes button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#iniciar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#pausar {
+    background-color: #f44336;
+    color: white;
+}
+
+#zerar {
+    background-color: #2196F3;
+    color: white;
+}
+
+.botoes button:hover {
+    opacity: 0.8;
+}
+
+
+/* Estilos do modal */
+.modal {
+    display: none; /* Inicialmente o modal está escondido */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
