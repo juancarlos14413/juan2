@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +18,7 @@
         </div>
         <div class="conteudo-senha">
             <label for="senha">Senha</label>
-            <input name="senha" type="text" id="campo-senha">
+            <input name="senha" type="text" id="campo-senha" readonly>
         </div>
         <div class="parametro">
             <h3 class="parametro-titulo">Personalize sua senha</h3>
@@ -32,93 +33,37 @@
                 </div>
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Características da senha</h4>
+                    <div class="parametro-senha-checkbox">
+                        <input name="maiusculo" type="checkbox" class="checkbox" checked>
+                        <label for="maiusculo">Letras maiúsculas</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="minusculo" type="checkbox" class="checkbox">
+                        <label for="minusculo">Letras minúsculas</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="numero" type="checkbox" class="checkbox">
+                        <label for="numero">Números</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="simbolo" type="checkbox" class="checkbox">
+                        <label for="simbolo">Símbolos</label>
+                    </div>
                 </div>
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Força da senha</h4>
+                    <div class="barra"></div>
+                    <div class="forca fraca"></div>
+                    <div class="parametro-senha-textos">
+                        <p>Fraca</p>
+                        <p>Média</p>
+                        <p>Forte</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const campoSenha = document.getElementById('campo-senha');
-            const btnMenos = document.querySelector('.parametro-senha-botoes button:first-child');
-            const btnMais = document.querySelector('.parametro-senha-botoes button:last-child');
-            const txtNumero = document.querySelector('.parametro-senha__texto');
-            const checkboxes = document.querySelectorAll('.parametro-senha-checkbox input');
-            
-            let tamanhoSenha = 12;
-            
-            // Atualiza o display do tamanho
-            txtNumero.textContent = tamanhoSenha;
-            
-            // Controles de + e -
-            btnMenos.addEventListener('click', () => {
-                if(tamanhoSenha > 4) {
-                    tamanhoSenha--;
-                    txtNumero.textContent = tamanhoSenha;
-                    gerarSenha();
-                }
-            });
-            
-            btnMais.addEventListener('click', () => {
-                if(tamanhoSenha < 20) {
-                    tamanhoSenha++;
-                    txtNumero.textContent = tamanhoSenha;
-                    gerarSenha();
-                }
-            });
-            
-            // Monitora mudanças nos checkboxes
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', gerarSenha);
-            });
-            
-            // Função para gerar a senha
-            function gerarSenha() {
-                const maiusculas = document.getElementById('maiusculas').checked;
-                const minusculas = document.getElementById('minusculas').checked;
-                const numeros = document.getElementById('numeros').checked;
-                const simbolos = document.getElementById('simbolos').checked;
-                
-                let caracteres = '';
-                if(maiusculas) caracteres += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                if(minusculas) caracteres += 'abcdefghijklmnopqrstuvwxyz';
-                if(numeros) caracteres += '0123456789';
-                if(simbolos) caracteres += '!@#$%^&*()_+-=[]{}|;:,.<>?';
-                
-                if(caracteres === '') {
-                    campoSenha.value = 'Selecione pelo menos um tipo';
-                    return;
-                }
-                
-                let senha = '';
-                for(let i = 0; i < tamanhoSenha; i++) {
-                    const randomIndex = Math.floor(Math.random() * caracteres.length);
-                    senha += caracteres[randomIndex];
-                }
-                
-                campoSenha.value = senha;
-            }
-            
-            // Gera a primeira senha ao carregar
-            gerarSenha();
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
-
-<div class="parametro-senha">
-    <h4 class="parametro-senha__titulo">Características da senha</h4>
-    <div class="parametro-senha-checkbox">
-        <input type="checkbox" id="maiusculas" checked>
-        <label for="maiusculas">Letras maiúsculas</label><br>
-        <input type="checkbox" id="minusculas" checked>
-        <label for="minusculas">Letras minúsculas</label><br>
-        <input type="checkbox" id="numeros" checked>
-        <label for="numeros">Números</label><br>
-        <input type="checkbox" id="simbolos" checked>
-        <label for="simbolos">Símbolos</label>
-    </div>
-</div>

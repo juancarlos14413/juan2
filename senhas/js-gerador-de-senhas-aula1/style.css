@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&family=Titan+One&display=swap');
 
 :root {
     --branco: white;
-    --cor-de-fundo: #001a35;
-    --fundo-senha: #1268ca;
-    --fundo-texto: #61abff;
-    --borda: #0b0c0c;
-    --roboto: 'Roboto', sans-serif;
-    --roboto-mono: 'Roboto Mono', monospace;
+    --cor-de-fundo: #1d4602;
+    --fundo-senha: #0f4d00;
+    --fundo-texto: #144000;
+    --borda: #33ff00;
+    --andika: 'andika', sans-serif;
+    --andika-mono: 'Andika Mono', monospace;
 }
 
 * {
@@ -107,6 +107,49 @@ body {
     margin: 0;
     font-size: 24px;
 }
+
+label {
+    font-size: 20px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.barra {
+    background-color: var(--fundo-senha);
+    height: 30px;
+    width: 100%;
+}
+
+.forca {
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+.fraca {
+    width: 25%;
+    background-color: #E71B32;
+}
+
+.media {
+    background-color: #FAF408;
+    width: 50%;
+}
+
+.forte {
+    background-color: #00FF85;
+    width: 100%;
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha {
